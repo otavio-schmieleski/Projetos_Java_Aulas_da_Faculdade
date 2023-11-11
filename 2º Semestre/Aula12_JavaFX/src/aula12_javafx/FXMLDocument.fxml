@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="695.0" prefWidth="534.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkg2023_dva_aula12_javafx_exe01.FXMLDocumentController">
+    <children>
+        <Button id="btn_entrar" fx:id="button" layoutX="195.0" layoutY="419.0" onAction="#handleButtonAction" style="-fx-background-color: green; -fx-background-radius: 30px;" text="ENTRAR" textAlignment="CENTER" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="V_RESIZE" />
+         </cursor>
+         <font>
+            <Font size="29.0" />
+         </font></Button>
+        <Label fx:id="label" layoutX="166.0" layoutY="73.0" minHeight="16" minWidth="69" text="Usuario" textAlignment="CENTER" textFill="#0400ff">
+         <font>
+            <Font size="60.0" />
+         </font></Label>
+      <TextField id="input_nome" alignment="CENTER" layoutX="174.0" layoutY="194.0" promptText="Informe seu Nome" style="-fx-background-radius: 30px;" />
+      <TextField id="input_senha" alignment="CENTER" layoutX="174.0" layoutY="292.0" promptText="Informe sua Idade" style="-fx-background-radius: 30px;" />
+    </children>
+</AnchorPane>

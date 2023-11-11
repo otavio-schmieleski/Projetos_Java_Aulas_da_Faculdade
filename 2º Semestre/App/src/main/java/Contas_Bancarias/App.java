@@ -1,5 +1,4 @@
-
-public class App{
+public class App {
 
     public static void main(String[] args) {
         ContaBancaria[] contas = new ContaBancaria[10];
@@ -15,7 +14,7 @@ public class App{
 
         contas[3] = new ContaCorrente();
         contas[3].setSaldo(4100.0);
-    
+
         contas[4] = new ContaPoupanca();
         contas[4].setSaldo(5100.0);
 
@@ -33,11 +32,11 @@ public class App{
 
         contas[9] = new ContaCorrente();
         contas[9].setSaldo(10100.0);
-        
+
         double saldoGeral = 0.0;
         double saldoPosPeriodo = 0.0;
 
-        for(ContaBancaria c : contas){
+        for (ContaBancaria c : contas) {
             saldoGeral += c.getSaldo();
             c.cobrarTaxa();
             c.pagarJuros();
@@ -45,7 +44,6 @@ public class App{
         }
         System.out.println("Saldo Geral = R$ " + saldoGeral);
         System.out.println("Saldo Pos Periodo = R$ " + saldoPosPeriodo);
-
 
     }
 }
