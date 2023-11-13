@@ -124,16 +124,24 @@ public class CadastroUsuarioController implements Initializable {
         boolean cnh = false;
         
         if(checkBrasileiro.isSelected() == true) br = true;
-        if(checkSim.isSelected() == true || checkNao.isSelected()) cnh = true;
+        if(checkSim.isSelected() == true || checkNao.isSelected() == true) cnh = true;
         
         slider();
         
         String cnhValida = "";
-        if (checkSim.isSelected() == true) {
+        
+        if (checkSim.isSelected() && checkNao.isSelected()) {
+            JOptionPane.showMessageDialog(null,"Selecione apenas Sim ou Não!","ALERTA", JOptionPane.ERROR_MESSAGE);
+            checkSim.setSelected(false);
+            checkNao.setSelected(false);
+            cnh = false;
+        }
+        
+        else if (checkSim.isSelected() && !(checkNao.isSelected())) {
             cnhValida = "True";
         }
-        else if(checkNao.isSelected()){
-           cnhValida = "False";
+        else if(checkNao.isSelected() && !(checkSim.isSelected())){
+            cnhValida = "False";
         }
         else{
             cnhValida = "True" ;
@@ -143,14 +151,14 @@ public class CadastroUsuarioController implements Initializable {
         String data = myDate.toString();
         
         String Informacao = "Cadastro Efetuado com sucesso! \n"+
-                "Usuario: " +txtNome.getText() + "\n" +
-                "Estato Civil: " + estCivil + "\n"+
-                "Brasileiro: " + br + "\n"+
-                "Data de Nascimento: " + data + "\n" +
-                "Possui CNH: " + cnhValida + "\n" +
-                "Escolaridade: " + stringSlider + "\n";
+                            "Usuario: " +txtNome.getText() + "\n" +
+                            "Estato Civil: " + estCivil + "\n"+
+                            "Brasileiro: " + br + "\n"+
+                            "Data de Nascimento: " + data + "\n" +
+                            "Possui CNH: " + cnhValida + "\n" +
+                            "Escolaridade: " + stringSlider + "\n";
         
-        if(nome != null && estCivil != null && br == true && cnh == true && stringSlider != null){
+        if((nome != null) && (estCivil != null) && (!data.equals("null")) && (cnh == true)){
             JOptionPane.showMessageDialog(null,Informacao);
         }
         else{
@@ -171,10 +179,8 @@ public class CadastroUsuarioController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        slider();
         dateData.setValue(LocalDate.now());
-        
+        slider();
     }
     
 }
