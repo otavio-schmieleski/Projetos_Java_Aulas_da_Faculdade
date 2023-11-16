@@ -1,4 +1,8 @@
-package marcador_de_truco;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMain.java to edit this template
+ */
+package projeto_marcado_de_truco;
 
 import java.io.IOException;
 import java.net.URL;
@@ -12,7 +16,11 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class Marcador_de_Truco extends Application {
+/**
+ *
+ * @author otavi
+ */
+public class Projeto_Marcado_de_Truco extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
