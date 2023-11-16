@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="275.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="marcador_de_truco.Marcador_de_TrucoController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/background.png" />
+         </image>
+      </ImageView>
+      <TextField alignment="CENTER" layoutX="7.0" layoutY="15.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Nós">
+         <font>
+            <Font name="Arial Bold" size="27.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" layoutX="136.0" layoutY="15.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Eles">
+         <font>
+            <Font name="Arial Bold" size="27.0" />
+         </font>
+      </TextField>
+      <Label fx:id="pontos_J1" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="151.0" prefHeight="107.0" prefWidth="70.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="55.0" />
+         </font>
+      </Label>
+      <Label fx:id="pontos_J2" alignment="CENTER" layoutX="173.0" layoutY="151.0" prefHeight="107.0" prefWidth="70.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="55.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="538.0" text="Vitórias" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="vitorias_J2" alignment="CENTER" contentDisplay="CENTER" layoutX="205.5" layoutY="561.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="vitorias_J1" alignment="CENTER" contentDisplay="CENTER" layoutX="68.5" layoutY="561.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="26.0" layoutX="19.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/btn_menos_truco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="26.0" layoutX="232.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/btn_menos_truco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="132.0" fitWidth="74.0" layoutX="169.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/btn_soma.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="132.0" fitWidth="74.0" layoutX="49.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/btn_soma.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_soma_J1" layoutX="49.0" layoutY="323.0" mnemonicParsing="false" onAction="#btn_soma_J1_action" prefHeight="95.0" prefWidth="74.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_soma_J2" layoutX="171.0" layoutY="323.0" mnemonicParsing="false" onAction="#btn_soma_J2_action" prefHeight="95.0" prefWidth="74.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_diminuir_J1" layoutX="19.0" layoutY="282.0" mnemonicParsing="false" onAction="#btn_diminuir_J1_action" prefHeight="36.0" prefWidth="26.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_diminuir_J2" layoutX="232.0" layoutY="282.0" mnemonicParsing="false" onAction="#btn_diminuir_J2_action" prefHeight="36.0" prefWidth="26.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_truco" layoutX="42.0" layoutY="477.0" mnemonicParsing="false" onAction="#btn_truco_action" prefHeight="32.0" prefWidth="210.0" text="TRUCO (0)">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="36.0" fitWidth="26.0" layoutX="45.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/btn_soma.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="26.0" layoutX="222.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/btn_soma.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
